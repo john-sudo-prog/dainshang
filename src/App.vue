@@ -23,13 +23,16 @@
       <!-- 移动端菜单 -->
       <div v-if="mobileMenuOpen" class="md:hidden bg-black/90 backdrop-blur-md">
         <div class="px-2 pt-2 pb-3 space-y-1">
-          <a href="#advantages" class="block px-3 py-2 text-gray-300 hover:text-white">核心优势</a>
-          <a href="#business" class="block px-3 py-2 text-gray-300 hover:text-white">业务矩阵</a>
-          <a href="#milestones" class="block px-3 py-2 text-gray-300 hover:text-white">里程碑</a>
-          <a href="#vision" class="block px-3 py-2 text-gray-300 hover:text-white">使命愿景</a>
+          <a @click="scrollToSection('advantages')" class="block px-3 py-2 text-gray-300 hover:text-white cursor-pointer">核心优势</a>
+          <a @click="scrollToSection('business')" class="block px-3 py-2 text-gray-300 hover:text-white cursor-pointer">业务矩阵</a>
+          <a @click="scrollToSection('milestones')" class="block px-3 py-2 text-gray-300 hover:text-white cursor-pointer">里程碑</a>
+          <a @click="scrollToSection('vision')" class="block px-3 py-2 text-gray-300 hover:text-white cursor-pointer">使命愿景</a>
         </div>
       </div>
     </nav>
+
+    <!-- 点击外部关闭移动端菜单的遮罩 -->
+    <div v-if="mobileMenuOpen" @click="closeMobileMenu" class="fixed inset-0 z-40 md:hidden"></div>
 
     <!-- 英雄区域 -->
     <section class="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
@@ -44,10 +47,10 @@
           构建下一代跨境电商基础设施，让全球贸易更简单
         </p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up animation-delay-600">
-          <button class="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 transform hover:scale-105">
+          <button @click="scrollToSection('business')" class="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 transform hover:scale-105">
             开始合作
           </button>
-          <button class="px-8 py-4 border border-white/20 text-white rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
+          <button @click="scrollToSection('milestones')" class="px-8 py-4 border border-white/20 text-white rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
             了解更多
           </button>
         </div>
@@ -263,6 +266,17 @@ const milestones = ref([
 // 方法
 const toggleMobileMenu = () => {
   mobileMenuOpen.value = !mobileMenuOpen.value
+}
+
+const scrollToSection = (sectionId: string) => {
+  const element = document.getElementById(sectionId)
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' })
+  }
+}
+
+const closeMobileMenu = () => {
+  mobileMenuOpen.value = false
 }
 
 // 生命周期
