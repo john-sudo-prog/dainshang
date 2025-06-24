@@ -6,7 +6,7 @@
         <div class="flex justify-between items-center h-16">
           <div class="flex items-center">
             <Globe class="h-8 w-8 text-blue-400 mr-3" />
-            <span class="text-xl font-bold text-white">跨境电商</span>
+            <span class="text-2xl font-black bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent tracking-wider drop-shadow-lg">FRIT</span>
           </div>
           <div class="hidden md:flex space-x-8">
             <a href="#advantages" class="text-gray-300 hover:text-white transition-colors duration-300">核心优势</a>
@@ -152,17 +152,18 @@
       <div class="max-w-7xl mx-auto text-center">
         <div class="flex items-center justify-center mb-6">
           <Globe class="h-8 w-8 text-blue-400 mr-3" />
-          <span class="text-xl font-bold text-white">跨境电商</span>
+          <span class="text-2xl font-black bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent tracking-wider drop-shadow-lg">FENGRUI</span>
         </div>
-        <p class="text-gray-400 mb-4">© 2024 跨境电商平台. 保留所有权利.</p>
+        <p class="text-gray-400 mb-6 text-sm">Guangxi Fengrui Information Technical Service Co., Ltd</p>
+        <p class="text-gray-400 mb-4">© 2025 FENGRUI平台. 保留所有权利.</p>
         <div class="flex justify-center space-x-6">
-          <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+          <a href="mailto:contact@fengrui.com" class="text-gray-400 hover:text-white transition-colors duration-300">
             <Mail class="h-5 w-5" />
           </a>
-          <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+          <a href="tel:+86-773-12345678" class="text-gray-400 hover:text-white transition-colors duration-300">
             <Phone class="h-5 w-5" />
           </a>
-          <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+          <a href="https://uri.amap.com/marker?position=110.2993,25.2744&name=广西桂林市七星区" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-300">
             <MapPin class="h-5 w-5" />
           </a>
         </div>
